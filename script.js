@@ -1,105 +1,61 @@
 
 const menuBtn = document.getElementById("menuBtn");
-const navbar = document.getElementById("navbar");
+const navMenu = document.getElementById("navMenu");
 
-// Mobile navigation
 menuBtn.addEventListener("click", () => {
-  navbar.classList.toggle("show");
-
-  const isOpen = navbar.classList.contains("show");
-  menuBtn.textContent = isOpen ? "✕" : "☰";
-  menuBtn.setAttribute("aria-expanded", String(isOpen));
+    const isOpen = navMenu.classList.toggle("open");
+    menuBtn.setAttribute("aria-expanded", String(isOpen));
+    menuBtn.textContent = isOpen ? "✕" : "☰";
 });
 
-// Close menu after clicking a navigation link
-document.querySelectorAll(".navbar a").forEach(link => {
-  link.addEventListener("click", () => {
-    navbar.classList.remove("show");
-    menuBtn.textContent = "☰";
-    menuBtn.setAttribute("aria-expanded", "false");
-  });
+document.querySelectorAll("#navMenu a").forEach(link => {
+    link.addEventListener("click", () => {
+        navMenu.classList.remove("open");
+        menuBtn.setAttribute("aria-expanded", "false");
+        menuBtn.textContent = "☰";
+    });
 });
 
-// Highlight the current section in navigation
-const sections = document.querySelectorAll("main section[id]");
-const navLinks = document.querySelectorAll(".navbar a");
+// Rotating job titles
+const titles = [
+    "Web Developer",
+    "Python Programmer",
+    "UI Designer",
+    "Tech Enthusiast"
+];
 
-function updateActiveLink() {
-  let currentSection = "home";
+const typingElement = document.getElementById("typing");
+let titleIndex = 0;
 
-  sections.forEach(section => {
-    if (window.scrollY >= section.offsetTop - 150) {
-      currentSection = section.id;
-    }
-  });
+setInterval(() => {
+    titleIndex = (titleIndex + 1) % titles.length;
+    typingElement.style.opacity = "0";
 
-  navLinks.forEach(link => {
-    link.classList.toggle(
-      "active",
-      link.getAttribute("href") === "#" + currentSection
-    );
-  });
-}
+    setTimeout(() => {
+        typingElement.textContent = titles[titleIndex];
+        typingElement.style.opacity = "1";
+    }, 250);
+}, 2200);
 
-window.addEventListener("scroll", updateActiveLink);
-updateActiveLink();
-
-// Reveal cards smoothly as you scroll
+// Reveal sections when they enter the screen
 const revealElements = document.querySelectorAll(
-  ".section-heading, .feature-card, .skill-card, .project-card, .education-card"
+    ".about-card, .skill-card, .project-card, .contact-box"
 );
 
 revealElements.forEach(element => {
-  element.style.opacity = "0";
-  element.style.transform = "translateY(20px)";
-  element.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+    element.style.opacity = "0";
+    element.style.transform = "translateY(20px)";
+    element.style.transition = "opacity 0.6s ease, transform 0.6s ease";
 });
 
-if ("IntersectionObserver" in window) {
-  const observer = new IntersectionObserver((entries) => {
+const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = "1";
-        entry.target.style.transform = "translateY(0)";
-        observer.unobserve(entry.target);
-      }
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+            observer.unobserve(entry.target);
+        }
     });
-  }, { threshold: 0.12 });
+}, { threshold: 0.12 });
 
-  revealElements.forEach(element => observer.observe(element));
-} else {
-  revealElements.forEach(element => {
-    element.style.opacity = "1";
-    element.style.transform = "translateY(0)";
-  });
-}
-
-// Contact form: opens the user's email application
-const contactForm = document.getElementById("contactForm");
-const formStatus = document.getElementById("formStatus");
-
-contactForm.addEventListener("submit", function(event) {
-  event.preventDefault();
-
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const message = document.getElementById("message").value.trim();
-
-  if (!name || !email || !message) {
-    formStatus.textContent = "Please complete all fields.";
-    return;
-  }
-
-  const recipient = "yourname@gmail.com"; // Replace with your email
-  const subject = encodeURIComponent("Portfolio Contact from " + name);
-  const body = encodeURIComponent(
-    "Name: " + name +
-    "\nEmail: " + email +
-    "\n\nMessage:\n" + message
-  );
-
-  formStatus.textContent = "Opening your email application...";
-
-  window.location.href =
-    `mailto:${recipient}?subject=${subject}&body=${body}`;
-});
+revealElements.forEach(element => observer.observe(element));
