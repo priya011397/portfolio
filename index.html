@@ -2,216 +2,207 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Creative Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priya Portfolio | Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <header class="header">
-    <a href="#home" class="logo"><span>Priya</span> Portfolio</a>
+<header class="navbar">
+    <a href="#home" class="logo">Port<span>folio.</span></a>
 
-    <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation">☰</button>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu"
+            aria-expanded="false">☰</button>
 
-    <nav class="navbar" id="navbar">
-      <a href="#home" class="active">Home</a>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#education">Education</a>
-      <a href="#contact">Contact</a>
+    <nav id="navMenu">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact" class="nav-contact">Contact Me</a>
     </nav>
+</header>
 
-    <a class="cv-btn" href="#contact">Let's Connect ↗</a>
-  </header>
-
-  <main>
-    <section class="hero" id="home">
-      <div class="hero-content">
-        <span class="hello">Hello, I'm</span>
-        <h1>A<span>Priya</span></h1>
-        <h2>Web Developer & Problem Solver</h2>
-        <p>
-          I'm an Information Technology student who loves
-          building beautiful websites, exploring new technologies,
-          and turning creative ideas into real projects.
+<main>
+<section class="hero" id="home">
+    <div class="hero-content">
+        <p class="tag">WELCOME TO MY CREATIVE WORLD</p>
+        <h1>Hello, I'm <span>Priya</span></h1>
+        <h2>Aspiring <span id="typing">Web Developer</span></h2>
+        <p class="intro">
+            I create modern, attractive and user-friendly websites.
+            I love learning new technologies and turning ideas into reality.
         </p>
 
         <div class="hero-buttons">
-          <a href="#projects" class="btn primary">View My Projects →</a>
-          <a href="#contact" class="btn secondary">Contact Me</a>
+            <a href="#projects" class="btn primary">Explore My Work ↗</a>
+            <a href="#contact" class="btn secondary">Let's Connect</a>
         </div>
 
-        <div class="social-links">
-          <a href="https://github.com/" target="_blank" rel="noopener">GitHub ↗</a>
-          <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn ↗</a>
-          <a href="priya13110697@gmail.com">Email ↗</a>
+        <div class="socials">
+            <a href="https://github.com/" target="_blank" rel="noopener">GitHub ↗</a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn ↗</a>
         </div>
-      </div>
+    </div>
 
-      <div class="hero-image">
-        <div class="image-shape"></div>
-        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=700"
-             alt="Portfolio profile portrait">
-        <div class="floating-note">Better Code,<br>Brighter Future ♡</div>
-      </div>
-    </section>
+    <div class="hero-visual">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="profile-card">
+            <div class="profile-icon">👩🏻‍💻</div>
+            <p class="profile-label">CREATIVE DEVELOPER</p>
+            <h3>Code. Create. Innovate.</h3>
+            <p>Building digital experiences ✨</p>
+        </div>
+        <div class="floating-card float-top">💻 Clean Code</div>
+        <div class="floating-card float-bottom">✦ Creative Ideas</div>
+    </div>
+</section>
 
-    <section class="about section" id="about">
-      <div class="section-heading">
-        <span>ABOUT ME</span>
-        <h2>A<em>Priya</em></h2>
-      </div>
+<section class="about section" id="about">
+    <div class="section-heading">
+        <p class="tag">GET TO KNOW ME</p>
+        <h2>About <span>Me</span></h2>
+    </div>
 
-      <div class="about-layout">
-        <div class="about-text">
-          <p>
-            I am a B.Sc. Information Technology student with a strong
-            interest in web development, programming, and technology.
-            I enjoy learning new skills, solving problems, and creating
-            projects that make a difference.
-          </p>
-          <a href="#education" class="btn secondary">My Journey →</a>
+    <div class="about-card">
+        <div class="about-symbol">✦</div>
+        <div>
+            <h3>A Passionate IT Student</h3>
+            <p>
+                I am an enthusiastic Information Technology student who enjoys
+                programming, designing websites and solving problems.
+                I am continuously improving my technical skills through
+                academic projects and practical learning.
+            </p>
+            <p>
+                My goal is to become a skilled software professional and
+                develop useful digital solutions.
+            </p>
+            <div class="about-details">
+                <p><strong>Name:</strong> Your Name</p>
+                <p><strong>Education:</strong> B.Sc. Information Technology</p>
+                <p><strong>Interest:</strong> Web Development</p>
+                <p><strong>Goal:</strong> Software Developer</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="skills section" id="skills">
+    <div class="section-heading">
+        <p class="tag">WHAT I CAN DO</p>
+        <h2>My Technical <span>Skills</span></h2>
+    </div>
+
+    <div class="skill-grid">
+        <div class="skill-card">
+            <span>🌐</span>
+            <h3>HTML</h3>
+            <div class="progress"><div style="--level:85%"></div></div>
+            <p>Structure and web pages</p>
         </div>
 
-        <div class="feature-grid">
-          <article class="feature-card lavender">
-            <div class="feature-icon">🎓</div>
-            <div><h3>Quick Learner</h3><p>I enjoy discovering and learning new things.</p></div>
-          </article>
-
-          <article class="feature-card pink">
-            <div class="feature-icon">💡</div>
-            <div><h3>Problem Solver</h3><p>I find practical solutions to challenges.</p></div>
-          </article>
-
-          <article class="feature-card blue">
-            <div class="feature-icon">👥</div>
-            <div><h3>Team Player</h3><p>I enjoy teamwork and collaboration.</p></div>
-          </article>
-
-          <article class="feature-card green">
-            <div class="feature-icon">⭐</div>
-            <div><h3>Creative Thinker</h3><p>I turn ideas into useful digital products.</p></div>
-          </article>
+        <div class="skill-card">
+            <span>🎨</span>
+            <h3>CSS</h3>
+            <div class="progress"><div style="--level:75%"></div></div>
+            <p>Styling and responsive UI</p>
         </div>
-      </div>
-    </section>
 
-    <section class="skills section" id="skills">
-      <div class="section-heading">
-        <span>MY SKILLS</span>
-        <h2>What I Work <em>With</em></h2>
-        <p>Technologies and tools I'm learning and using.</p>
-      </div>
+        <div class="skill-card">
+            <span>⚡</span>
+            <h3>JavaScript</h3>
+            <div class="progress"><div style="--level:60%"></div></div>
+            <p>Interactive web experiences</p>
+        </div>
 
-      <div class="skill-grid">
-        <div class="skill-card"><div class="skill-logo html">5</div><h3>HTML5</h3><div class="dots">● ● ● ● ○</div></div>
-        <div class="skill-card"><div class="skill-logo css">3</div><h3>CSS3</h3><div class="dots">● ● ● ○ ○</div></div>
-        <div class="skill-card"><div class="skill-logo js">JS</div><h3>JavaScript</h3><div class="dots">● ● ● ○ ○</div></div>
-        <div class="skill-card"><div class="skill-logo python">Py</div><h3>Python</h3><div class="dots">● ● ● ○ ○</div></div>
-        <div class="skill-card"><div class="skill-logo mysql">DB</div><h3>MySQL</h3><div class="dots">● ● ● ○ ○</div></div>
-        <div class="skill-card"><div class="skill-logo git">Git</div><h3>Git & GitHub</h3><div class="dots">● ● ● ○ ○</div></div>
-      </div>
-    </section>
+        <div class="skill-card">
+            <span>🐍</span>
+            <h3>Python</h3>
+            <div class="progress"><div style="--level:70%"></div></div>
+            <p>Programming and logic</p>
+        </div>
 
-    <section class="projects section" id="projects">
-      <div class="section-heading">
-        <span>MY PROJECTS</span>
-        <h2>Featured <em>Projects</em></h2>
-        <p>Some projects I've built during my learning journey.</p>
-      </div>
+        <div class="skill-card">
+            <span>☕</span>
+            <h3>Java</h3>
+            <div class="progress"><div style="--level:60%"></div></div>
+            <p>Object-oriented programming</p>
+        </div>
 
-      <div class="project-grid">
+        <div class="skill-card">
+            <span>🗄️</span>
+            <h3>SQL</h3>
+            <div class="progress"><div style="--level:70%"></div></div>
+            <p>Database management</p>
+        </div>
+    </div>
+</section>
+
+<section class="projects section" id="projects">
+    <div class="section-heading">
+        <p class="tag">MY RECENT WORK</p>
+        <h2>Featured <span>Projects</span></h2>
+    </div>
+
+    <div class="project-grid">
         <article class="project-card">
-          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800"
-               alt="Electrical shop website displayed on a computer">
-          <div class="project-info">
-            <h3>Electrical Shop Website</h3>
-            <p>A website for browsing electrical products and services.</p>
-            <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-            <a href="https://soorya2628.github.io/Project/" target="_blank" rel="noopener">View Project ↗</a>
-          </div>
+            <div class="project-art art-one">🛍️</div>
+            <div class="project-info">
+                <span class="project-type">WEB DEVELOPMENT</span>
+                <h3>E-Commerce Website</h3>
+                <p>A modern shopping website with product cards, search and cart features.</p>
+                <div class="chips"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+                <a href="https://github.com/" target="_blank" rel="noopener">View Project ↗</a>
+            </div>
         </article>
 
         <article class="project-card">
-          <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800"
-               alt="Developer working on a computer">
-          <div class="project-info">
-            <h3>Personal Portfolio</h3>
-            <p>A responsive portfolio showcasing skills and achievements.</p>
-            <div class="tags"><span>HTML</span><span>CSS</span><span>UI Design</span></div>
-            <a href="#home">View Project ↗</a>
-          </div>
+            <div class="project-art art-two">📊</div>
+            <div class="project-info">
+                <span class="project-type">STUDENT PROJECT</span>
+                <h3>Student Management</h3>
+                <p>A simple interface concept for organizing student information and records.</p>
+                <div class="chips"><span>Python</span><span>SQL</span></div>
+                <a href="https://github.com/" target="_blank" rel="noopener">View Project ↗</a>
+            </div>
         </article>
 
         <article class="project-card">
-          <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800"
-               alt="Mobile application interface">
-          <div class="project-info">
-            <h3>QR Attendance System</h3>
-            <p>A student attendance concept using QR codes.</p>
-            <div class="tags"><span>Python</span><span>Database</span><span>QR Code</span></div>
-            <a href="#contact">Project Details ↗</a>
-          </div>
+            <div class="project-art art-three">👩🏻‍💻</div>
+            <div class="project-info">
+                <span class="project-type">PERSONAL BRAND</span>
+                <h3>Personal Portfolio</h3>
+                <p>A responsive portfolio to showcase my skills, projects and achievements.</p>
+                <div class="chips"><span>HTML</span><span>CSS</span><span>JS</span></div>
+                <a href="#home">Explore Portfolio ↗</a>
+            </div>
         </article>
-      </div>
-    </section>
+    </div>
+</section>
 
-    <section class="education section" id="education">
-      <div class="section-heading">
-        <span>MY EDUCATION</span>
-        <h2>Education & <em>Learning</em></h2>
-      </div>
+<section class="contact section" id="contact">
+    <div class="contact-box">
+        <p class="tag">HAVE A PROJECT IN MIND?</p>
+        <h2>Let's Build Something <span>Amazing!</span></h2>
+        <p>I'm interested in learning, collaborating and exploring new opportunities.</p>
+        <a class="btn primary" href="mailto:yourmail@example.com">✉ Contact Me</a>
+        <p class="email-note">Replace this email with your own email address.</p>
+    </div>
+</section>
+</main>
 
-      <div class="education-grid">
-        <article class="education-card">
-          <div class="feature-icon">🎓</div>
-          <div><span>2023 – 2026</span><h3>B.Sc. Information Technology</h3>
-          <p>Learning programming, databases, networking, and web technologies.</p></div>
-        </article>
+<footer>
+    <a href="#home" class="logo">Port<span>folio.</span></a>
+    <p>Designed with 💜 by priya</p>
+    <a href="#home">Back to top ↑</a>
+    <p class="copyright">© 2026 All rights reserved.</p>
+</footer>
 
-        <article class="education-card">
-          <div class="feature-icon">📚</div>
-          <div><span>Higher Secondary</span><h3>School Education</h3>
-          <p>Building a foundation in science, mathematics, and computer studies.</p></div>
-        </article>
-      </div>
-    </section>
-
-    <section class="contact section" id="contact">
-      <div class="contact-intro">
-        <div class="section-heading">
-          <span>GET IN TOUCH</span>
-          <h2>Contact <em>Me</em></h2>
-        </div>
-        <p>Have a project or opportunity in mind? Feel free to reach out. I'd love to connect!</p>
-        <p>✉️ priya13110697@gmail.com</p>
-        <p>📍 Tamil Nadu, India</p>
-        <p>🟢 Open to learning and collaboration</p>
-      </div>
-
-      <form class="contact-form" id="contactForm">
-        <div class="form-row">
-          <input type="text" id="name" placeholder="Your Name" required>
-          <input type="email" id="email" placeholder="Your Email" required>
-        </div>
-        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit" class="btn primary">Send Message →</button>
-        <p id="formStatus" aria-live="polite"></p>
-      </form>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <a href="#home" class="logo"><span>SR</span> Portfolio</a>
-    <p>© 2026 Priya. All Rights Reserved.</p>
-    <p>Made with ♥ for a better web</p>
-  </footer>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
